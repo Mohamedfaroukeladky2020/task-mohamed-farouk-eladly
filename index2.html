@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="btn-group">
+        <button class="btn-primary" onclick="addNewItem()">إضافة عنصر جديد</button>
+        <label for="recordsPerPage">أظهر</label>
+        <select id="recordsPerPage" onchange="changeRecordsPerPage()">
+            <option value="5">5 مدخلات</option>
+            <option value="10" selected>10 مدخلات</option>
+            <option value="20">20 مدخلات</option>
+        </select>
+    </div>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>الأوامر</th>
+                <th>الوصف بالإنجليزي</th>
+                <th>الوصف بالعربي</th>
+                <th>الاسم بالإنجليزي</th>
+                <th>الاسم بالعربي</th>
+                <th>الصورة</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be added dynamically here -->
+        </tbody>
+    </table>
+
+    <div class="form-container" id="form-container" style="display:none;">
+        <h3>إضافة عنصر جديد</h3>
+        <form id="add-item-form">
+            <input type="text" id="name-ar" placeholder="الاسم بالعربي" required>
+            <input type="text" id="name-en" placeholder="الاسم بالإنجليزي" required>
+            <input type="text" id="desc-ar" placeholder="الوصف بالعربي" required>
+            <input type="text" id="desc-en" placeholder="الوصف بالإنجليزي" required>
+            <input type="text" id="image-url" placeholder="رابط الصورة" required>
+            <button type="button" onclick="addItem()">إضافة</button>
+        </form>
+    </div>
+</div>
+    
+
+
+
+
+    <script src="java2.js"></script>
+</body>
+</html>
